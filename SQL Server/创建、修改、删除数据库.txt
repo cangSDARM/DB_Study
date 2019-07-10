@@ -1,0 +1,55 @@
+Sql 不区分大小写(关键字, 值)
+
+赋值和逻辑都是 = , 没有 ==
+
+use master  --使用系统数据库(储存了所有数据库的信息)
+if exists(select * from sysdatabases where name='')
+	--判断是否存在
+	drop database 数据库
+go --批处理结束
+
+--开启'外围配置管理器的XpCmdshell权限'
+exec sp_configure 'show advanced options', 1
+Reconfigure   --重载配置
+exec sp_configure 'xp_cmdshell', 1
+Reconfigure
+go
+
+exec xp_cmdshell 'mkdir D:\Database'  --自动创建文件夹
+
+create database 数据库名称
+on primary --在哪个文件组上创建(primary可省略)
+(
+	name='逻辑名称_data',
+	size=3mb,  --初始大小
+	fileGrowth=10mb,  --增长方式
+	maxsize=100mb,   --最大容量
+	filename='C:\Name_data.mdf'   --全路径(带扩展名)
+),
+filegroup UserDefine  --切换文件组
+(
+	name='逻辑名称_data1',
+	size=3mb,
+	fileGrowth=10mb,
+	maxsize=100mb,
+	filename='C:\Name_data1.ndf'   --次数据文件.可以不加
+)
+log on --日志文件
+(
+	name='逻辑名称_log',
+	size=3mb,
+	fileGrowth=10%,
+	filename='C:\Name_data.ldf'
+)
+
+--修改
+alter database dbName
+modify file(
+	name = 'dbName',			-- Specified file. File name couldn't change
+	-- size, maxsize, filegrowth
+);
+modify name = dbName00;			-- database name. It's not any relationship with file name
+exec sp_helpdb dbName00;		-- View database attributes
+
+--删除
+drop database dbName;

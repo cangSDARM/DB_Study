@@ -1,0 +1,119 @@
+全局变量
+	@@ 符号开头
+	由系统维护, 只能读取
+	ex:
+		@@ERROR 最后一个T-SQL错误的错误号
+		@@IDENTITY 最后一次插入的标识值
+		@@LANGUAGE 当前使用的语言
+		@@MAX_CONNECTIONS 可以创建的同时连接最大数
+		@@ROWCOUNT 受上一个SQL语句影响的行数
+		@@SERVERNAME 本地服务器名称
+		@@TRANSCOUNT 当前连接打开的事物数
+		@@VERSION SQL-Server的版本
+局部变量
+	@ 符号开头
+	声明: declare @变量名 变量类型 = 默认值
+	表变量: declare @var table(col int, col2 char(5));
+	赋值: set @变量名 = 值     		--一次只能给一个变量赋值
+		 select @变量名 = 值         --一次可以给多个变量赋值
+
+语句
+
+--如果case后接<表达式/字段>则[when]只能做等值判断且不能判断null
+--否则[when]可用表达式, 且不限制列
+case 表达式/字段(可以没有)
+	when 值 then
+		自定义值
+	else 如果when都不满足
+end
+
+IF() begin
+	...
+end else begin
+	...
+end
+
+WHILE() begin
+	...
+	continue
+	break
+end
+
+子查询
+1.作为条件
+	只能返回一行一列
+	子查询返回多行单列, 使用in
+	如果返回多列, 只能使用exists
+	select * from table where Col=(select Col from table)
+2.作为结果集
+	需要给结果集添加别名
+	select * from (select * from table) as A
+3.作为列的值(经常用多表连接替换掉)
+	select (select * from table) from table
+
+子查询分页
+--ROW_NUMBER over 会生成不间断的行号
+select * from (select ROW_NUMBER() over(order by Col) id, * from table) temp where id>1 and id<5
+
+视图
+create view VW_视图名 as
+	select语句
+go
+
+drop view VW_视图名
+
+事物
+begin transaction
+commit transaction
+rollback transaction
+
+存储过程
+create procedure USP_存储过程名称 (
+	输出参数 参数类型 output, [用户创建变量并传入, 请求服务器返回值]
+	形参 参数类型=默认值
+)as
+	return 值 [只能返回int值]
+go
+
+execute USP_存储过程名称 输出参数 output, 输入参数
+execute returnVal = USP_存储过程名称 输入参数 [用return返回的]
+drop USP_存储过程名称
+
+触发器
+create trigger tr_触发器名称
+on 表 after/for/instead of 增加删除(delete)修改
+as
+--任意逻辑
+go
+	ex: 模拟主键,删除重复插入的数据
+	create trigger tr_updateStu on Student
+	after insert
+	as
+	begin
+		declare @sid int
+		select @sid = sid from inserted	--获取新增行数据(系统的inserted表?)
+		if not exists(select * from Student where sid = @sid)	--判断学生是否存在
+			print 'Ok'
+		else	--存在则删除
+			delete from Student sid = @sid
+	end
+	go
+
+Index索引
+	提高查询速度, 分聚集(表按聚集索引排序)和非聚集
+	是一张表(sysindexes), 通过具体算法(如: B+, hash)来实现快速查询
+if exists(select * from sysindexes where name="IX_索引名") begin
+	drop index 表.IX_索引名
+end
+create [clustered] index IX_索引名 on 表名(索引列)
+	* clustered 聚集/ nonclustered 非聚集
+
+临时表
+	1. 局部临时表: 只能在创建临时表的会话中使用, 关闭则清除
+	create table #temp(
+	--同正常表创建
+	)
+	2. 全局临时表: 当前会话不关闭, 其它会话也能用, 关闭则清除
+	create table ##temp(
+	--同正常表创建
+	)

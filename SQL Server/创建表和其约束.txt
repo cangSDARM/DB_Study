@@ -1,0 +1,32 @@
+use database
+--检查表是否存在
+if exists(select * from sysobjects where name='tableName')
+	drop table tableName
+go
+
+create table tableName(
+	Id int identity(1, 1), --设置标识列, identity(标识种子, 标识增量)
+	ColName int not null, --非空
+	Col2 varchar(1),
+	Col3 money
+);
+
+--创建约束
+	种类: 主键(PK) 外键(FK) 唯一键(UQ) 检查约束(CK) 默认值(DF)
+alter table 表名
+add constraint 约束名称 约束类型 约束的语法
+
+	--EX1: 默认值约束
+	if exists(select * from sysobjects where name='DF_Col')
+		alter table tableName drop constraint DF_Col
+	go
+
+	alter table tableName
+	add constraint DF_Col default(1) for Col2;
+
+	--EX2: 外键约束
+	alter table tableName
+	with nocheck  --不检查现有数据
+	add constraint FK_Col foreign key(Col2) references FK_Table(ColName)
+	on delete cascade  --级联操作(删除主表数据时怎么办)[no action|cascade|set null|set default]
+	on update no action  --主键更新时的级联操作
