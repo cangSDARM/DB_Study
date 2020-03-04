@@ -1,49 +1,49 @@
 /*
-£¨1£©²éÑ¯¼ÆËã»úÏµÑ§ÉúµÄĞŞ¿ÎÇé¿ö£¬ÒªÇóÁĞ³öÑ§ÉúµÄÃû×Ö¡¢ËùĞŞ¿ÎµÄ¿Î³ÌºÅºÍ³É¼¨¡£
-£¨2£©²éÑ¯¡°ĞÅÏ¢¹ÜÀíÏµ¡±ĞŞÁË¡°¼ÆËã»úÎÄ»¯Ñ§¡± µÄÑ§ÉúĞÕÃûºÍ³É¼¨¡£
-£¨3£©²éÑ¯ËùÓĞÑ¡ĞŞÁËJava¿Î³ÌµÄÑ§ÉúÇé¿ö£¬ÁĞ³öÑ§ÉúĞÕÃûºÍËùÔÚÏµ¡£
-£¨4£©Í³¼ÆÃ¿¸öÏµµÄÑ§ÉúµÄ¿¼ÊÔÆ½¾ù³É¼¨¡£
-£¨5£©²éÑ¯Óë¡°Áõ³¿¡±ÔÚÍ¬Ò»¸öÏµÑ§Ï°µÄÑ§Éú¡£
-£¨6£©²éÑ¯¿¼ÊÔ³É¼¨´óÓÚ90·ÖµÄÑ§ÉúµÄÑ§ºÅºÍĞÕÃû¡£
-£¨7£©²éÑ¯¼ÆËã»úÏµÑ¡ÁË¡°C002¡±¿Î³ÌµÄÑ§Éú£¬ÁĞ³öĞÕÃûºÍĞÔ±ğ¡£
-£¨8£©²éÑ¯Ñ¡ĞŞÁË¡°Java¡±¿Î³ÌµÄÑ§ÉúµÄÑ§ºÅºÍĞÕÃû¡£
-£¨9£©Í³¼ÆÑ¡ÁËJava¿Î³ÌµÄÕâĞ©Ñ§ÉúµÄÑ¡¿ÎÃÅÊıºÍÆ½¾ù³É¼¨¡£
-£¨10£©²éÑ¯Ñ¡ÁË¡°JAVA¡±¿Î³ÌµÄÑ§ÉúÑ§ºÅ¡¢ĞÕÃûºÍJAVA³É¼¨¡£
-£¨11£©²éÑ¯Ñ¡ÁË¡°C004¡±ºÅ¿Î³ÌÇÒ³É¼¨¸ßÓÚ´Ë¿Î³ÌµÄÆ½¾ù³É¼¨µÄÑ§ÉúµÄÑ§ºÅºÍ³É¼¨¡£
-£¨12£©²éÑ¯¿¼ÊÔÆ½¾ù³É¼¨¸ßÓÚÈ«ÌåÑ§ÉúµÄ×ÜÆ½¾ù³É¼¨µÄÑ§ÉúµÄÑ§ºÅºÍÆ½¾ù³É¼¨¡£
-£¨13£©²éÑ¯Ã»Ñ¡¡°C001¡±ºÅ¿Î³ÌµÄÑ§ÉúĞÕÃûºÍËùÔÚÏµ¡£
-£¨14£©²éÑ¯¼ÆËã»úÏµÃ»Ñ¡JAVA¿Î³ÌµÄÑ§ÉúĞÕÃûºÍĞÔ±ğ¡£
-(15) ²éÑ¯ÆäËûÑ§ÆÚ¿ªÉèµÄ¿Î³ÌÖĞ±ÈµÚ1Ñ§ÆÚ¿ªÉè¿Î³ÌµÄÑ§·ÖÉÙµÄ¿Î³ÌÃû¡¢¿ª¿ÎÑ§ÆÚºÍÑ§·Ö¡£
-£¨16£©²éÑ¯ÖÁÉÙÓĞÒ»´Î³É¼¨´óÓÚµÈÓÚ90µÄÑ§ÉúµÄĞÕÃû£¬ËùĞŞµÄ¿Î³ÌºÅºÍ³É¼¨¡£
-£¨17£©²éÑ¯±ÈµÚ1Ñ§ÆÚ¿ªÉèµÄËùÓĞ¿Î³ÌµÄÑ§·Ö¶¼Ğ¡µÄÆäËûÑ§ÆÚ¿ªÉèµÄ¿Î³ÌÃû¡¢¿ª¿ÎÑ§ÆÚºÍÑ§·Ö¡£
-£¨18£©²éÑ¯Ã¿¸öÑ§ÆÚÑ§·Ö×îµÍµÄ¿Î³ÌµÄ¿Î³ÌÃû¡¢¿ª¿ÎÑ§ÆÚºÍÑ§·Ö¡£
-£¨19£©²éÑ¯Ã¿ÃÅ¿Î³Ì¿¼ÊÔ³É¼¨×î¸ßµÄÁ½¸öÑ§ÉúµÄÑ§ºÅÒÔ¼°ÏàÓ¦µÄ¿Î³ÌºÅºÍ³É¼¨¡£²»°üÀ¨Ã»¿¼ÊÔµÄ¿Î³Ì¡£
-£¨20£©²éÑ¯Ã¿ÃÅ¿Î³ÌÖĞ£¬¿¼ÊÔ³É¼¨µÍÓÚ¸ÃÃÅ¿Î³ÌµÄÆ½¾ù³É¼¨µÄÑ§ÉúµÄÑ§ºÅºÍ³É¼¨¡£
-£¨21£©²éÑ¯ÓĞ×î¸ßÑ§·Ö³¬¹ı±¾Ñ§ÆÚÆ½¾ùÑ§·Ö1.5±¶µÄÑ§ÆÚ¡£
-£¨22£©²éÑ¯Ñ§ÉúĞÕÃû¡¢ËùÔÚÏµºÍ¸ÃÑ§ÉúÑ¡µÄ¿Î³ÌÃÅÊı¡£
-£¨23£©²éÑ¯¿Î³ÌÃû¡¢¿ª¿ÎÑ§ÆÚ¼°Ñ¡¸ÃÃÅ¿ÎµÄÑ§ÉúÈËÊı¡¢Æ½¾ù³É¼¨¡£²»°üÀ¨Ã»ÈËÑ¡µÄ¿Î³Ì¡£
-(24) Ê¹ÓÃexists²éÑ¯Ñ¡ÁË¡°C002¡±¿Î³ÌµÄÑ§ÉúĞÕÃû¡£
-£¨25£©Ê¹ÓÃexists²éÑ¯Ñ¡ÁËJAVA¿Î³ÌµÄÑ§ÉúĞÕÃûºÍËùÔÚÏµ¡£
-£¨26£©Ê¹ÓÃexists²éÑ¯Ã»ÓĞÑ¡ĞŞ¡°C001¡±¿Î³ÌµÄÑ§ÉúĞÕÃûºÍËùÔÚÏµ¡£
-(27) Ê¹ÓÃexists²éÑ¯¼ÆËã»úÏµÃ»Ñ¡JAVAµÄÑ§ÉúĞÕÃûºÍĞÔ±ğ¡£
-(28) Ê¹ÓÃexists²éÑ¯ÖÁÉÙÑ¡ÁËÈ«²¿¿Î³ÌµÄÑ§ÉúµÄÑ§ºÅ¡¢ĞÕÃûºÍËùÔÚÏµ¡£
-(29) Ê¹ÓÃexists²éÑ¯ÖÁÉÙÑ¡ÁË¡°0811102¡±Ñ§ÉúËùÑ¡µÄÈ«²¿¿Î³ÌµÄÑ§ÉúµÄÑ§ºÅºÍËùÑ¡µÄ¿Î³ÌºÅ¡£
+ï¼ˆ1ï¼‰æŸ¥è¯¢è®¡ç®—æœºç³»å­¦ç”Ÿçš„ä¿®è¯¾æƒ…å†µï¼Œè¦æ±‚åˆ—å‡ºå­¦ç”Ÿçš„åå­—ã€æ‰€ä¿®è¯¾çš„è¯¾ç¨‹å·å’Œæˆç»©ã€‚
+ï¼ˆ2ï¼‰æŸ¥è¯¢â€œä¿¡æ¯ç®¡ç†ç³»â€ä¿®äº†â€œè®¡ç®—æœºæ–‡åŒ–å­¦â€ çš„å­¦ç”Ÿå§“åå’Œæˆç»©ã€‚
+ï¼ˆ3ï¼‰æŸ¥è¯¢æ‰€æœ‰é€‰ä¿®äº†Javaè¯¾ç¨‹çš„å­¦ç”Ÿæƒ…å†µï¼Œåˆ—å‡ºå­¦ç”Ÿå§“åå’Œæ‰€åœ¨ç³»ã€‚
+ï¼ˆ4ï¼‰ç»Ÿè®¡æ¯ä¸ªç³»çš„å­¦ç”Ÿçš„è€ƒè¯•å¹³å‡æˆç»©ã€‚
+ï¼ˆ5ï¼‰æŸ¥è¯¢ä¸â€œåˆ˜æ™¨â€åœ¨åŒä¸€ä¸ªç³»å­¦ä¹ çš„å­¦ç”Ÿã€‚
+ï¼ˆ6ï¼‰æŸ¥è¯¢è€ƒè¯•æˆç»©å¤§äº90åˆ†çš„å­¦ç”Ÿçš„å­¦å·å’Œå§“åã€‚
+ï¼ˆ7ï¼‰æŸ¥è¯¢è®¡ç®—æœºç³»é€‰äº†â€œC002â€è¯¾ç¨‹çš„å­¦ç”Ÿï¼Œåˆ—å‡ºå§“åå’Œæ€§åˆ«ã€‚
+ï¼ˆ8ï¼‰æŸ¥è¯¢é€‰ä¿®äº†â€œJavaâ€è¯¾ç¨‹çš„å­¦ç”Ÿçš„å­¦å·å’Œå§“åã€‚
+ï¼ˆ9ï¼‰ç»Ÿè®¡é€‰äº†Javaè¯¾ç¨‹çš„è¿™äº›å­¦ç”Ÿçš„é€‰è¯¾é—¨æ•°å’Œå¹³å‡æˆç»©ã€‚
+ï¼ˆ10ï¼‰æŸ¥è¯¢é€‰äº†â€œJAVAâ€è¯¾ç¨‹çš„å­¦ç”Ÿå­¦å·ã€å§“åå’ŒJAVAæˆç»©ã€‚
+ï¼ˆ11ï¼‰æŸ¥è¯¢é€‰äº†â€œC004â€å·è¯¾ç¨‹ä¸”æˆç»©é«˜äºæ­¤è¯¾ç¨‹çš„å¹³å‡æˆç»©çš„å­¦ç”Ÿçš„å­¦å·å’Œæˆç»©ã€‚
+ï¼ˆ12ï¼‰æŸ¥è¯¢è€ƒè¯•å¹³å‡æˆç»©é«˜äºå…¨ä½“å­¦ç”Ÿçš„æ€»å¹³å‡æˆç»©çš„å­¦ç”Ÿçš„å­¦å·å’Œå¹³å‡æˆç»©ã€‚
+ï¼ˆ13ï¼‰æŸ¥è¯¢æ²¡é€‰â€œC001â€å·è¯¾ç¨‹çš„å­¦ç”Ÿå§“åå’Œæ‰€åœ¨ç³»ã€‚
+ï¼ˆ14ï¼‰æŸ¥è¯¢è®¡ç®—æœºç³»æ²¡é€‰JAVAè¯¾ç¨‹çš„å­¦ç”Ÿå§“åå’Œæ€§åˆ«ã€‚
+(15) æŸ¥è¯¢å…¶ä»–å­¦æœŸå¼€è®¾çš„è¯¾ç¨‹ä¸­æ¯”ç¬¬1å­¦æœŸå¼€è®¾è¯¾ç¨‹çš„å­¦åˆ†å°‘çš„è¯¾ç¨‹åã€å¼€è¯¾å­¦æœŸå’Œå­¦åˆ†ã€‚
+ï¼ˆ16ï¼‰æŸ¥è¯¢è‡³å°‘æœ‰ä¸€æ¬¡æˆç»©å¤§äºç­‰äº90çš„å­¦ç”Ÿçš„å§“åï¼Œæ‰€ä¿®çš„è¯¾ç¨‹å·å’Œæˆç»©ã€‚
+ï¼ˆ17ï¼‰æŸ¥è¯¢æ¯”ç¬¬1å­¦æœŸå¼€è®¾çš„æ‰€æœ‰è¯¾ç¨‹çš„å­¦åˆ†éƒ½å°çš„å…¶ä»–å­¦æœŸå¼€è®¾çš„è¯¾ç¨‹åã€å¼€è¯¾å­¦æœŸå’Œå­¦åˆ†ã€‚
+ï¼ˆ18ï¼‰æŸ¥è¯¢æ¯ä¸ªå­¦æœŸå­¦åˆ†æœ€ä½çš„è¯¾ç¨‹çš„è¯¾ç¨‹åã€å¼€è¯¾å­¦æœŸå’Œå­¦åˆ†ã€‚
+ï¼ˆ19ï¼‰æŸ¥è¯¢æ¯é—¨è¯¾ç¨‹è€ƒè¯•æˆç»©æœ€é«˜çš„ä¸¤ä¸ªå­¦ç”Ÿçš„å­¦å·ä»¥åŠç›¸åº”çš„è¯¾ç¨‹å·å’Œæˆç»©ã€‚ä¸åŒ…æ‹¬æ²¡è€ƒè¯•çš„è¯¾ç¨‹ã€‚
+ï¼ˆ20ï¼‰æŸ¥è¯¢æ¯é—¨è¯¾ç¨‹ä¸­ï¼Œè€ƒè¯•æˆç»©ä½äºè¯¥é—¨è¯¾ç¨‹çš„å¹³å‡æˆç»©çš„å­¦ç”Ÿçš„å­¦å·å’Œæˆç»©ã€‚
+ï¼ˆ21ï¼‰æŸ¥è¯¢æœ‰æœ€é«˜å­¦åˆ†è¶…è¿‡æœ¬å­¦æœŸå¹³å‡å­¦åˆ†1.5å€çš„å­¦æœŸã€‚
+ï¼ˆ22ï¼‰æŸ¥è¯¢å­¦ç”Ÿå§“åã€æ‰€åœ¨ç³»å’Œè¯¥å­¦ç”Ÿé€‰çš„è¯¾ç¨‹é—¨æ•°ã€‚
+ï¼ˆ23ï¼‰æŸ¥è¯¢è¯¾ç¨‹åã€å¼€è¯¾å­¦æœŸåŠé€‰è¯¥é—¨è¯¾çš„å­¦ç”Ÿäººæ•°ã€å¹³å‡æˆç»©ã€‚ä¸åŒ…æ‹¬æ²¡äººé€‰çš„è¯¾ç¨‹ã€‚
+(24) ä½¿ç”¨existsæŸ¥è¯¢é€‰äº†â€œC002â€è¯¾ç¨‹çš„å­¦ç”Ÿå§“åã€‚
+ï¼ˆ25ï¼‰ä½¿ç”¨existsæŸ¥è¯¢é€‰äº†JAVAè¯¾ç¨‹çš„å­¦ç”Ÿå§“åå’Œæ‰€åœ¨ç³»ã€‚
+ï¼ˆ26ï¼‰ä½¿ç”¨existsæŸ¥è¯¢æ²¡æœ‰é€‰ä¿®â€œC001â€è¯¾ç¨‹çš„å­¦ç”Ÿå§“åå’Œæ‰€åœ¨ç³»ã€‚
+(27) ä½¿ç”¨existsæŸ¥è¯¢è®¡ç®—æœºç³»æ²¡é€‰JAVAçš„å­¦ç”Ÿå§“åå’Œæ€§åˆ«ã€‚
+(28) ä½¿ç”¨existsæŸ¥è¯¢è‡³å°‘é€‰äº†å…¨éƒ¨è¯¾ç¨‹çš„å­¦ç”Ÿçš„å­¦å·ã€å§“åå’Œæ‰€åœ¨ç³»ã€‚
+(29) ä½¿ç”¨existsæŸ¥è¯¢è‡³å°‘é€‰äº†â€œ0811102â€å­¦ç”Ÿæ‰€é€‰çš„å…¨éƒ¨è¯¾ç¨‹çš„å­¦ç”Ÿçš„å­¦å·å’Œæ‰€é€‰çš„è¯¾ç¨‹å·ã€‚
  */
 use xkgl
 --1
-select student.Sname, SC.Cno, SC.Grade from student right join SC on SC.Sno = student.Sno where student.Sdept = '¼ÆËã»úÏµ';
+select student.Sname, SC.Cno, SC.Grade from student right join SC on SC.Sno = student.Sno where student.Sdept = 'è®¡ç®—æœºç³»';
 --2
-select student.Sname, SC.Grade from student right join SC on SC.Sno = student.Sno right join Course on Course.Cno = SC.Cno where Course.Cname = '¼ÆËã»úÎÄ»¯Ñ§' and student.Sdept = 'ĞÅÏ¢¹ÜÀíÏµ'
+select student.Sname, SC.Grade from student right join SC on SC.Sno = student.Sno right join Course on Course.Cno = SC.Cno where Course.Cname = 'è®¡ç®—æœºæ–‡åŒ–å­¦' and student.Sdept = 'ä¿¡æ¯ç®¡ç†ç³»'
 --3
 select student.Sname, student.Sdept from student right join SC on SC.Sno = student.Sno right join Course on Course.Cno = SC.Cno where Course.Cname = 'Java'
 --4
 select avg(SC.Grade) as 'avgGrade' from SC right join student on student.Sno = SC.Sno group by student.Sdept
 --5
-select SC.Cno, count(SC.Sno), avg(SC.Grade), max(SC.Grade), min(SC.Grade) from SC left join student on student.Sno = SC.Sno where student.Sdept='¼ÆËã»úÏµ' group by SC.Cno
+select SC.Cno, count(SC.Sno), avg(SC.Grade), max(SC.Grade), min(SC.Grade) from SC left join student on student.Sno = SC.Sno where student.Sdept='è®¡ç®—æœºç³»' group by SC.Cno
 --6
-select A.Sname, A.Sdept from student as A left join student as B on B.Sdept = A.Sdept where B.Sname = 'Áõ³¿'
+select A.Sname, A.Sdept from student as A left join student as B on B.Sdept = A.Sdept where B.Sname = 'åˆ˜æ™¨'
 --7
-select A.Cname, A.Semester from Course as A left join Course as B on B.Semester = A.Semester where B.Cname = 'Êı¾İ½á¹¹'
+select A.Cname, A.Semester from Course as A left join Course as B on B.Semester = A.Semester where B.Cname = 'æ•°æ®ç»“æ„'
 --8
 select SC.Cno from SC group by SC.Cno having count(SC.Sno) > 1
 --9
@@ -51,13 +51,13 @@ select student.Sname, SC.Cno from student inner join SC on SC.Sno = student.Sno
 --10
 select Cno from Course where not exists(select*from SC where Cno=Course.Cno)
 --11
-select Sname, Ssex from student left join SC on student.Sno = SC.Sno where student.Sdept = '¼ÆËã»úÏµ' and SC.Cno is null
+select Sname, Ssex from student left join SC on student.Sno = SC.Sno where student.Sdept = 'è®¡ç®—æœºç³»' and SC.Cno is null
 --12
-select count(SC.Cno) from student left join SC on SC.Sno = student.Sno where student.Sdept = '¼ÆËã»úÏµ' group by student.Sno
+select count(SC.Cno) from student left join SC on SC.Sno = student.Sno where student.Sdept = 'è®¡ç®—æœºç³»' group by student.Sno
 --13
-select student.Sno, count(SC.Cno) from student left join SC on SC.Sno = student.Sno where student.Sdept = 'ĞÅÏ¢¹ÜÀíÏµ' group by student.Sno order by count(SC.Cno)
+select student.Sno, count(SC.Cno) from student left join SC on SC.Sno = student.Sno where student.Sdept = 'ä¿¡æ¯ç®¡ç†ç³»' group by student.Sno order by count(SC.Cno)
 --14
-select Student.Sname, Student.Ssex from Student where Sdept='¼ÆËã»úÏµ' and Sno not in(select Sno from Course,SC where Cname='Java' and Course.Cno=SC.Cno)
+select Student.Sname, Student.Ssex from Student where Sdept='è®¡ç®—æœºç³»' and Sno not in(select Sno from Course,SC where Cname='Java' and Course.Cno=SC.Cno)
 --15
 select Cname, Semester, Credit from Course where Semester != '1' and Credit < any(select Credit from Course where Semester='1')
 --16
